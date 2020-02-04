@@ -6,7 +6,8 @@ import {
   View,
   AnimatedImage,
   ComboBox,
-  Text
+  Text,
+  SVG,
 } from "./index";
 import { QIcon, QVariant, QPushButtonSignals } from "@nodegui/nodegui";
 import { useEventHandler } from "./hooks";
@@ -31,10 +32,15 @@ const App = () => {
   );
   return (
     <Window>
+      <SVG width={300} height={20} />
+    </Window>
+  )
+  return (
+    <Window>
       <View style={containerStyle}>
         <Text openExternalLinks={true}>
-          {`<a 
-              style="color: white" 
+          {`<a
+              style="color: white"
               href="https://react.nodegui.org/docs/guides/getting-started/">
             docs
           </a>`}
@@ -55,8 +61,8 @@ const App = () => {
 };
 
 const containerStyle = `
-  flex: 1; 
-  justify-content:'center'; 
+  flex: 1;
+  justify-content:'center';
   border: 1px solid blue;
   padding: 10;
 `;
